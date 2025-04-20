@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bee Colony Optimization</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Bee Colony Optimization for Resource Allocation</h1>
+  </header>
+
+  <div class="container">
+
+    <section class="content">
+      <!-- Intro Left -->
+      <div class="intro-section">
+        <h2>What is the Artificial Bee Colony Algorithm?</h2>
+        <p>
+          The <strong>Artificial Bee Colony (ABC) Algorithm</strong> is inspired by the foraging behavior of honey bees. It simulates the process of bees searching for food to solve complex optimization problems, like allocating resources efficiently.
+        </p>
+        <p>
+          It uses three types of bees — <strong>Employed</strong>, <strong>Onlooker</strong>, and <strong>Scout</strong> — to balance solution refinement and discovery.
+        </p>
+
+        <!-- Image Below Intro -->
+        <div class="intro-image">
+          <img src="BeeColony.gif" alt="Bee Colony Optimization Illustration"/>
+        </div>
+      </div>
+
+      <!-- Input Right -->
+      <div class="inputs-section">
+        <h2>Set Parameters</h2>
+        <p>Enter the number of tasks and resources to simulate the algorithm.</p>
+        <div class="input-fields">
+          <div class="input-group">
+            <label for="numTasks">Number of Tasks:</label>
+            <input type="number" id="numTasks" value="5" min="1"/>
+          </div>
+          <div class="input-group">
+            <label for="numResources">Number of Resources:</label>
+            <input type="number" id="numResources" value="5" min="1"/>
+          </div>
+        </div>
+        <button id="runAlgorithm">Run Algorithm</button>
+
+        <div class="results">
+          <h3>Results</h3>
+          <div class="chart-container">
+            <canvas id="resourceChart"></canvas>
+          </div>
+          <pre id="algorithmResult"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra Info -->
+    <section class="extra-info">
+      <h2>How ABC Works</h2>
+      <p>The ABC algorithm mimics bee behavior:</p>
+      <ul>
+        <li><strong>Employed Bees:</strong> Exploit known solutions.</li>
+        <li><strong>Onlooker Bees:</strong> Select promising solutions from employed bees.</li>
+        <li><strong>Scout Bees:</strong> Discover new random solutions to explore new areas.</li>
+      </ul>
+
+      <h2>Applications</h2>
+      <ul>
+        <li>Task Scheduling</li>
+        <li>Machine Learning Tuning</li>
+        <li>Image Processing</li>
+        <li>Traveling Salesman Problem</li>
+        <li>Resource Optimization</li>
+      </ul>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Simple and powerful</li>
+        <li>Good global search ability</li>
+        <li>Flexible and widely applicable</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
